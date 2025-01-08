@@ -1,0 +1,119 @@
+\documentclass[a4paper, 14pt]{extreport}
+
+%\usepackage{showframe} % Отображение границ отступов
+
+\sloppy
+
+% Таблицы
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{dcolumn}
+\usepackage{longtable}
+\usepackage{adjustbox}
+\usepackage{multirow}
+
+% Кодировка и язык
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc} 
+\usepackage[english,russian]{babel}
+
+\usepackage{amsmath}
+
+% Геометрия страницы и графика
+\usepackage[left=3cm, right=15mm, top=2cm, bottom=2cm]{geometry} % поля страницы
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\graphicspath{{images/}}
+
+% Прочее
+\usepackage[font={normal}]{caption} % настройка подписей к рисункам и таблицам
+\usepackage[onehalfspacing]{setspace} % полуторный интервал
+\setlength{\parskip}{0cm}
+\setlength{\parindent}{1.25cm} 
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{float}
+
+% Подписи
+\usepackage{ragged2e}
+\usepackage{ccaption}
+\captiondelim{ — }
+\captionstyle{\centering}
+
+% Список источников
+\usepackage{csquotes}        
+\usepackage[
+backend=biber,
+hyperref=auto,
+sorting=none, % сортировка в порядке встречаемости ссылок
+language=auto,
+citestyle=gost-numeric,
+bibstyle=gost-numeric
+]{biblatex}
+\addbibresource{biblio.bib}
+
+%Счетчики
+\newcounter{mycitecount}  
+\usepackage[figure,table,mycitecount]{totalcount}
+\usepackage{lastpage}
+\AtEveryBibitem{\stepcounter{mycitecount}}
+
+% Замена шрифтов
+\usepackage{tempora}
+
+% Настройка подписей к изображениям и таблицам
+\captionsetup{format=hang,labelsep=period}
+
+% Настройка заголовков
+\usepackage{titlesec}
+\titleformat{\chapter}[block]
+	{\indent\indent\normalfont\bfseries}{\thechapter}{0.3em}{}
+\titleformat{\section}[block]
+	{\indent\indent\normalfont\bfseries}{\thesection}{0.3em}{}
+\titleformat{\subsection}[block]
+	{\indent\indent\normalfont}{\thesubsection}{0.3em}{}
+\titlespacing{\chapter}{0pt}{0pt}{0pt}
+\titlespacing{\section}{0pt}{20pt}{0pt}
+\titlespacing{\subsection}{0pt}{20pt}{0pt}
+
+% Настройка перечислений
+\usepackage{enumitem}
+\setlist[itemize]{label=\textendash, leftmargin=0mm, itemindent=18mm, itemsep=0mm, parsep=0mm, topsep=0cm}
+\setlist[enumerate]{wide=0pt, leftmargin=0mm, itemindent=15mm, itemsep=0mm, parsep=0mm, topsep=0cm,label=\arabic*)}
+
+% Настройка содержания
+\usepackage{tocloft}
+\renewcommand{\cftbeforechapskip}{0pt}
+\renewcommand{\cftbeforetoctitleskip}{-10pt}
+\renewcommand{\cftaftertoctitleskip}{8pt}
+\renewcommand{\cfttoctitlefont}{\normalfont}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftchapdotsep}{2}
+\renewcommand{\cftchappagefont}{\normalfont}
+\renewcommand{\cftsecdotsep}{2}
+\renewcommand{\cftsubsecdotsep}{2}
+\renewcommand{\cftchapfont}{\normalsize}
+\setlength{\cftsecindent}{1em}
+\setlength{\cftsubsecindent}{2em}
+\setlength{\cftsubsubsecindent}{3em}
+\setlength{\cftchapnumwidth}{0.85em}
+\setlength{\cftsecnumwidth}{1.7em}
+\setlength{\cftsubsecnumwidth}{2.9em}
+
+% Настройка листингов
+\usepackage{listings}
+\lstdefinestyle{mystyle}{	
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=t,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=15pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\lstset{style=mystyle}
+\renewcommand{\ttdefault}{cmtt}
+\lstset{basicstyle=\small\ttfamily}

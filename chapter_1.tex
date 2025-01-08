@@ -1,0 +1,31 @@
+\chapter{Примеры}
+
+\input{section_1_1.tex}
+
+\section{Примеры рисунков и таблиц}
+
+Пример рисунка изображен на рисунке \ref{fig:example1}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{example1.jpg}
+	\caption{Пример рисунка}
+	\label{fig:example1}
+\end{figure}
+
+Пример таблицы в таблице \ref{table:example1}.
+
+\begin{table}[h!]
+\captionstyle{\justifying}
+	\caption{Пример таблицы}
+		\begin{adjustbox}{width=1\textwidth}
+			\small
+			\begin{tabular}{|m{3.9cm}|l|m{3cm}|}
+				\hline
+				\textbf{Колонка 1} & \textbf{Колонка 2} & \textbf{Колонка 3} \\ \hline
+				поле 1.1 & поле 2.1 & поле 3.1 \\ \hline
+				поле 1.2 & поле 2.2 & поле 3.2 \\ \hline
+				поле 1.3 & поле 2.3 & поле 3.3 \\ \hline
+			\end{tabular}
+		\end{adjustbox}	
+	\label{table:example1}
+\end{table}

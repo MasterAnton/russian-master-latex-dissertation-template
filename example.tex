@@ -1,0 +1,24 @@
+\input{preamble.tex}
+
+\begin{document}	
+\includepdf[pages={1-1}]{Titul.pdf}
+
+\input{essay.tex}
+\newpage
+\renewcommand{\contentsname}{\hfill\textbf{СОДЕРЖАНИЕ}\hfill}  
+\tableofcontents
+	
+\input{abbreviations.tex}
+\input{introduction.tex}
+\input{chapter_1.tex}
+\input{conclusion.tex}
+
+\newpage
+\addcontentsline{toc}{chapter}{СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ}
+\printbibliography[%{}
+	title={\hfill СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ\hfill}
+]
+
+\input{additions.tex}
+
+\end{document}
