@@ -1,6 +1,6 @@
 # LaTeX-шаблон для русской магистерской диссертации(ВКР) с оформлением по ГОСТ 7.32-2017*
 
-Пример сгенерированного pdf - https://github.com/MasterAnton/tex_example/blob/main/example.pdf
+Пример сгенерированного pdf - https://github.com/MasterAnton/russian-masters-latex-thesis-template/blob/main/example.pdf
 
 Для сборки использовался - pdflatex.
 Для списка источников - biber.
